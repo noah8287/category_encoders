@@ -72,4 +72,3 @@ runtest.py
 *.swo
 .vscode/
 */.DS_Store
-.DS_Store
