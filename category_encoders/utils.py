@@ -263,6 +263,7 @@ class BaseEncoder(BaseEstimator):
         self.invariant_cols = []
         self.verbose = verbose
         self.use_default_cols = cols is None  # if True, even a repeated call of fit() will select string columns from X
+        self.use_all_cols = str(cols) == 'all' # if True, even a repeated call of fit() will select all columns from X
         self.cols = cols
         self.mapping = None
         self.handle_unknown = handle_unknown
@@ -349,6 +350,9 @@ class BaseEncoder(BaseEstimator):
         # if columns aren't passed, just use every string column
         if self.use_default_cols:
             self.cols = get_obj_cols(X)
+        # if columns == 'all', use all columns
+        elif self.use_all_cols:
+            self.cols = convert_cols_to_list(X.columns)
         else:
             self.cols = convert_cols_to_list(self.cols)
 

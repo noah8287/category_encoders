@@ -70,3 +70,5 @@ runtest.py
 *~
 *.swp
 *.swo
+.vscode/
+*/.DS_Store
