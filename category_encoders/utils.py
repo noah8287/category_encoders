@@ -274,7 +274,7 @@ class BaseEncoder(BaseEstimator):
 
     def fit(self, X, y=None, **kwargs):
         """Fits the encoder according to X and y.
-        
+ 
         Parameters
         ----------
 
