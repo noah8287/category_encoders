@@ -25,7 +25,7 @@ from category_encoders.james_stein import JamesSteinEncoder
 from category_encoders.cat_boost import CatBoostEncoder
 from category_encoders.rankhot import RankHotEncoder
 
-__version__ = '2.5.1.post0'
+__version__ = '2.6.0'
 
 __author__ = "willmcginnis", "cmougan", "paulwestenthanner"
 
